@@ -1,0 +1,50 @@
+- name: restart sshd
+  service:
+    name: sshd
+    state: restarted
+
+- name: reboot system
+  shell: sleep 3; reboot
+  async: 0
+  poll: 0
+  ignore_errors: yes
+
+- name: restart snmpd
+  service:
+      name: snmpd
+      state: restarted
+
+- name: make grub2 config
+  command: grub2-mkconfig --output=/etc/grub2.cfg
+
+- name: restart ntpd
+  service:
+      name: ntpd
+      state: restarted
+
+# Handler changed to upstream due to known bug with auditd restarts
+# See https://bugzilla.redhat.com/show_bug.cgi?id=1026648.
+- name: restart auditd
+  service:
+      name: auditd
+      state: restarted
+      use: upstart
+
+- name: restart xinetd
+  service:
+      name: xinetd
+      state: restarted
+
+- name: update dconf database
+  command: dconf update
+
+- name: restart rsyslogd
+  service:
+      name: rsyslog
+      state: restarted
+
+- name: restart rc-local
+  service:
+    name: rc-local
+    state: restarted
+    enabled: yes
