@@ -1,3 +1,4 @@
-- hosts: "{{ target }}"
+---
+- hosts: all
   roles:
     - RHEL7-STIG
