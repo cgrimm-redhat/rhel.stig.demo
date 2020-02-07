@@ -3,7 +3,7 @@
   assert:
     that:
       - "ansible_os_family == 'RedHat'"
-      - "ansible_distribution_major_version | version_compare('8', '==')"
+      - "ansible_distribution_major_version | version_compare('7', '==')"
     msg: "This role can only be run agaist RHEL 7. {{ ansible_distribution }} {{ ansible_distribution_major_version }} is not supported."
 
 - name: Check ansible version
