@@ -10,15 +10,15 @@ Skipped Tags
 
 The below tags are skipped due to specific configuration requirements of the environment and assume that the system as not been registered to RHN.  If using Ansible Tower they will need to also be configured.  
 
-cat1
-RHEL-07-040180
-RHEL-07-040320
-RHEL-07-041004
-RHEL-07-041010
-RHEL-07-010090
-RHEL-07-040300
-RHEL-07-040520
-RHEL-07-040730
+cat1  
+RHEL-07-040180  
+RHEL-07-040320  
+RHEL-07-041004  
+RHEL-07-041010  
+RHEL-07-010090  
+RHEL-07-040300  
+RHEL-07-040520  
+RHEL-07-040730  
 
 This role is based on RHEL 7 DISA STIG: http://iase.disa.mil/stigs/os/unix-linux/Pages/index.aspx
 
@@ -51,9 +51,9 @@ Ansible Tower Extra Vars
 
 The below extra variables should be configured in Ansible Tower if using this role within an Ansible Tower Environment.  This will allow future use of the playbook to fully configure systems to be STIG compliant.
 
-rhel7stig_cat1_patch: false
-rhel7stig_cat2_patch: true
-rhel7stig_cat3_patch: false
+rhel7stig_cat1_patch: false  
+rhel7stig_cat2_patch: true  
+rhel7stig_cat3_patch: false  
 
 Dependencies
 ------------
