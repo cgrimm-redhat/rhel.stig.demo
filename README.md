@@ -5,6 +5,8 @@ RHEL 7 DISA STIG
 
 This role as configured will execute the DISA STIG against a RHEL 7 system to be compliant with most Cat II findings.  These will be audited and remediated automatically.  While all content for all Cat II and Cat I findings do exist they are intentionally skipped if you utilize the recommended tag skipping.
 
+This role is based on RHEL 7 DISA STIG: http://iase.disa.mil/stigs/os/unix-linux/Pages/index.aspx
+
 Skipped Tags
 ------------
 
@@ -19,9 +21,6 @@ RHEL-07-010090
 RHEL-07-040300  
 RHEL-07-040520  
 RHEL-07-040730  
-
-This role is based on RHEL 7 DISA STIG: http://iase.disa.mil/stigs/os/unix-linux/Pages/index.aspx
-
 
 Requirements
 ------------
@@ -73,7 +72,7 @@ The included example playbook (rhel7stig.yml) can be used to run this role from 
 Example Command-Line Usage
 --------------------------
 
-ansible-playbook rhel7stig.yml -u cloud-user --private-key=~/.ssh/ccoe --skip-tags="cat1,RHEL-07-040180,RHEL-07-040320,RHEL-07-041004,RHEL-07-041010,RHEL-07-010090,RHEL-07-040300,RHEL-07-040520,RHEL-07-040730" -e rhel7stig_cat2_patch=true
+    ansible-playbook rhel7stig.yml -u cloud-user --private-key=~/.ssh/ccoe --skip-tags="cat1,RHEL-07-040180,RHEL-07-040320,RHEL-07-041004,RHEL-07-041010,RHEL-07-010090,RHEL-07-040300,RHEL-07-040520,RHEL-07-040730" -e rhel7stig_cat2_patch=true
 
 
 License
