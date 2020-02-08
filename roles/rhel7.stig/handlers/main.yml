@@ -37,6 +37,7 @@
 
 - name: update dconf database
   command: dconf update
+  ignore_errors: yes
 
 - name: restart rsyslogd
   service:
