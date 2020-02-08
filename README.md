@@ -1,5 +1,5 @@
-RHEL 7 DISA STIG
-================
+RHEL STIG Ansible For Demos
+===========================
 **This role is purely for demonstration purposes only**
 
 
