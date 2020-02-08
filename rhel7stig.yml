@@ -1,4 +1,5 @@
 ---
-- hosts: localhost
+- hosts: all
+  become: true
   roles:
     - rhel7.stig
