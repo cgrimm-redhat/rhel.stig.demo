@@ -1,4 +1,8 @@
 ---
+- name: Wait for System to become available
+  wait_for_connection:
+    delay: 15
+
 - name: Check OS version and family
   assert:
     that:
