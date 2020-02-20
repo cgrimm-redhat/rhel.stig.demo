@@ -1,6 +1,5 @@
 ---
 - hosts: all
-  gather_facts: no
   become: true
   roles:
     - rhel7.stig
